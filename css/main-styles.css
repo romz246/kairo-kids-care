@@ -20,10 +20,10 @@ video {
 	max-width: 100%;
 }
 
-/* .header {
+.header {
 	position: fixed;
 	width: 100%;
-} */
+}
 
 .header-contact-info {
 	background-color: #32cd32;
@@ -60,7 +60,7 @@ video {
 	background-color: #501a57;
 	padding: 1.25rem 2rem;
 	transition: background-color 0.4s;
-	/* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); */
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -188,40 +188,45 @@ video {
 	text-decoration: none;
 }
 
-#progress {
+.scroll-to-top-button {
+	display: none;
+}
+
+.scroll-to-top-button.show {
 	position: fixed;
-	z-index: 1000;
+	/* z-index: 1; */
 	bottom: 50%;
 	right: 0.625rem;
 	transform: translateY(-50%);
-	/* bottom: 20px;
-right: 10px; */
-	width: 3.125rem;
-	height: 3.125rem;
-	display: none;
-	place-items: center;
+	width: 2.813rem;
+	height: 2.813rem;
+	display: inline-block;
 	border-radius: 50%;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 	border: none;
 	outline-color: transparent;
+	transition: all 0.3s ease-out;
 }
 
-#progress:hover {
+.scroll-to-top-button:hover,
+.scroll-to-top-button:focus-visible {
 	box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.4);
-	background-color: #501a57;
-	transition: all 0.2s;
+	transition: all 0.2s ease-in;
 }
 
-#progress-value {
-	display: block;
-	height: calc(100% - 15px);
-	width: calc(100% - 15px);
+.progress-value {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	height: calc(100% - 8px);
+	width: calc(100% - 8px);
 	background-color: #ffffff;
 	border-radius: 50%;
-	display: grid;
-	place-items: center;
-	font-size: 1.75rem;
+}
+
+.fa-angles-up {
+	font-size: 1.25rem;
 	color: #001a2e;
 }
 
