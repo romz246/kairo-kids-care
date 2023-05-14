@@ -196,11 +196,11 @@ video {
 	position: fixed;
 	/* z-index: 1; */
 	bottom: 50%;
-	right: 0.625rem;
-	transform: translateY(-50%);
+	right: -0.75rem;
+	transform: translate(-50%, -50%);
 	width: 2.813rem;
 	height: 2.813rem;
-	display: inline-block;
+	display: block;
 	border-radius: 50%;
 	cursor: pointer;
 	border: none;
