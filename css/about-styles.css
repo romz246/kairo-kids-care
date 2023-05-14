@@ -1,0 +1,236 @@
+.hero-content-container {
+	padding-bottom: 3.125rem;
+	margin-inline: 1rem;
+}
+
+.hero-main-title {
+	font-family: "Playfair Display", Cambria, Cochin, Georgia, Times,
+		"Times New Roman", serif, sans-serif;
+	font-size: 2.5rem;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+	padding-bottom: 2.5rem;
+}
+
+.main-section-container {
+	padding: 3.125rem 0 6.25rem 0;
+}
+
+.main-content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-inline: 1rem;
+}
+
+.main-content {
+	margin-bottom: 1.875rem;
+}
+
+.main-heading-and-lines {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5rem;
+}
+
+.main-heading {
+	font-family: "Playfair Display", Cambria, Cochin, Georgia, Times,
+		"Times New Roman", serif, sans-serif;
+	font-size: 1.875rem;
+	color: #000000;
+}
+
+.main-heading span {
+	color: #ff9100;
+}
+
+.main-line {
+	border: none;
+	outline: none;
+	background-color: #501a57;
+	height: 1px;
+	width: 8.75rem;
+}
+
+.main-text {
+	font-family: "Sofia Sans", Cambria, Cochin, Georgia, Times, "Times New Roman",
+		serif, sans-serif;
+	font-size: 1.375rem;
+	color: #363636;
+	text-align: center;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+}
+
+.goals li {
+	font-family: "Sofia Sans", Cambria, Cochin, Georgia, Times, "Times New Roman",
+		serif, sans-serif;
+	font-size: 1.375rem;
+	color: #363636;
+	list-style-type: none;
+	margin-bottom: 0.938rem;
+	padding-left: 0.313rem;
+}
+
+.goals li::marker {
+	content: "";
+	font-size: 1.25rem;
+	font-weight: 700;
+	font-family: "Font Awesome 5 Free";
+	color: #32cd32;
+}
+
+.meet-the-team {
+	font-family: "Playfair Display", Cambria, Cochin, Georgia, Times,
+		"Times New Roman", serif, sans-serif;
+	font-size: 2.5rem;
+	text-align: center;
+	/* color: #501a57; */
+	color: #ff9100;
+	text-decoration: 0.188rem underline #501a57;
+	margin-bottom: 2.5rem;
+}
+
+.meet-the-team span {
+	color: #000000;
+}
+
+.team-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 31.25rem;
+	width: 18.75rem;
+	padding-top: 1.563rem;
+}
+
+.team-member-photo {
+	height: 15.625rem;
+	width: 15.625rem;
+	border-radius: 0.125rem;
+	margin-bottom: 0.625rem;
+}
+
+.team-member-name {
+	font-family: "Playfair Display", Cambria, Cochin, Georgia, Times,
+		"Times New Roman", serif, sans-serif;
+	font-size: 1.563rem;
+	font-weight: 500;
+	font-style: italic;
+	color: #501a57;
+	margin-bottom: 0.313rem;
+}
+
+.team-member-position {
+	font-family: "Playfair Display", Cambria, Cochin, Georgia, Times,
+		"Times New Roman", serif, sans-serif;
+	font-size: 1.563rem;
+	font-weight: 500;
+	color: #000000;
+	margin-bottom: 0.625rem;
+}
+
+.team-line {
+	border: none;
+	outline: none;
+	background-color: #501a57;
+	height: 1px;
+	width: 3.125rem;
+	margin-bottom: 0.625rem;
+}
+
+.team-member-description {
+	font-family: "Sofia Sans", Cambria, Cochin, Georgia, Times, "Times New Roman",
+		serif, sans-serif;
+	font-size: 1.125rem;
+	text-transform: capitalize;
+	text-align: center;
+	color: #363636;
+}
+
+@media (min-width: 426px) {
+	.hero-main-title {
+		width: 100%;
+		max-width: 37.5rem;
+		margin-inline: auto;
+		font-size: 2.813rem;
+	}
+
+	.main-heading,
+	.goals-heading {
+		font-size: 2.125rem;
+	}
+
+	.main-text {
+		font-size: 1.5rem;
+		width: 100%;
+		max-width: 43.75rem;
+		margin-inline: auto;
+	}
+
+	.goals li {
+		font-size: 1.5rem;
+		width: 100%;
+		max-width: 43.75rem;
+		margin-inline: auto;
+	}
+
+	.team-container {
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.team-member-name,
+	.team-member-position {
+		font-size: 1.75rem;
+	}
+
+	.team-line {
+		width: 4.375rem;
+	}
+
+	.team-member-description {
+		font-size: 1.25rem;
+		width: 100%;
+		max-width: 50rem;
+	}
+}
+
+@media (min-width: 769px) {
+	.hero-main-title {
+		font-size: 3.375rem;
+		width: 100%;
+		max-width: 43.75rem;
+	}
+
+	.main-heading {
+		font-family: "Playfair Display", Cambria, Cochin, Georgia, Times,
+			"Times New Roman", serif, sans-serif;
+		font-size: 2.5rem;
+		color: #000000;
+	}
+
+	.main-heading-and-lines {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.main-line {
+		width: 6.25rem;
+	}
+}
