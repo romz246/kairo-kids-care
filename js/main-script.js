@@ -6,8 +6,6 @@ const navLinksLength = navLinks.length;
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const menu = document.querySelector(".nav-links");
 
-const scrollToTopBtn = document.getElementById("scroll-to-top-button");
-// const showOnPx = 300;
 const body = document.querySelector("body");
 
 const copyrightYear = document.getElementById("copyright-year");
@@ -19,6 +17,37 @@ for (let i = 0; i < navLinksLength; i++) {
 		navLinks[i].className = "active";
 	}
 }
+
+// Scroll To The Top function
+function calcScrollValue() {
+	const scrollProgress = document.getElementById("progress");
+	const progressValue = document.getElementById("progress-value");
+	const pos = document.documentElement.scrollTop;
+	const showOnPx = 100;
+	const calcHeight =
+		document.documentElement.scrollHeight -
+		document.documentElement.clientHeight;
+	const scrollValue = Math.round((pos * showOnPx) / calcHeight);
+
+	if (pos > showOnPx) {
+		scrollProgress.style.display = "grid";
+	} else {
+		scrollProgress.style.display = "none";
+	}
+
+	scrollProgress.addEventListener("click", goToTop);
+
+	scrollProgress.style.background = `conic-gradient(#00008bcc ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+}
+
+const goToTop = () => {
+	document.body.scrollIntoView({
+		behavior: "smooth",
+	});
+};
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
 
 // Hamburger Menu
 
@@ -38,43 +67,6 @@ hamburgerBtn.addEventListener("click", () => {
 		body.classList.toggle("fixed-position");
 	}
 });
-
-// Scroll To The Top function
-
-function calcScrollValue() {
-	// const progressValue = document.getElementById("progress-value");
-
-	const pos = document.documentElement.scrollTop;
-
-	const scrollContainer = () => {
-		return document.documentElement || document.body;
-	};
-
-	const scrollValue = Math.round(
-		(scrollContainer().scrollTop /
-			(scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
-			100
-	);
-
-	if (pos > scrollValue) {
-		scrollToTopBtn.classList.add("show");
-	} else {
-		scrollToTopBtn.classList.remove("show");
-	}
-
-	scrollToTopBtn.addEventListener("click", goToTop);
-
-	scrollToTopBtn.style.background = `conic-gradient(#32cd32 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
-}
-
-const goToTop = () => {
-	document.body.scrollIntoView({
-		behavior: "smooth",
-	});
-};
-
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
 
 // Copyright Function
 

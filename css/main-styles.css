@@ -188,45 +188,40 @@ video {
 	text-decoration: none;
 }
 
-.scroll-to-top-button {
-	display: none;
-}
-
-.scroll-to-top-button.show {
+#progress {
 	position: fixed;
-	/* z-index: 1; */
+	z-index: 1000;
 	bottom: 50%;
 	right: 0.625rem;
 	transform: translateY(-50%);
-	width: 2.813rem;
-	height: 2.813rem;
-	display: inline-block;
+	/* bottom: 20px;
+right: 10px; */
+	width: 3.125rem;
+	height: 3.125rem;
+	display: none;
+	place-items: center;
 	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 	border: none;
 	outline-color: transparent;
-	transition: all 0.3s ease-out;
 }
 
-.scroll-to-top-button:hover,
-.scroll-to-top-button:focus-visible {
+#progress:hover {
 	box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.4);
-	transition: all 0.2s ease-in;
+	background-color: #501a57;
+	transition: all 0.2s;
 }
 
-.progress-value {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
-	height: calc(100% - 8px);
-	width: calc(100% - 8px);
+#progress-value {
+	display: block;
+	height: calc(100% - 15px);
+	width: calc(100% - 15px);
 	background-color: #ffffff;
 	border-radius: 50%;
-}
-
-.fa-angles-up {
-	font-size: 1.25rem;
+	display: grid;
+	place-items: center;
+	font-size: 1.75rem;
 	color: #001a2e;
 }
 
