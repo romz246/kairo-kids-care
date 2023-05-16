@@ -12,6 +12,11 @@
 	font: inherit;
 }
 
+body {
+	height: 95vh;
+	max-height: 95vh;
+}
+
 img,
 picture,
 svg,
