@@ -6,8 +6,6 @@ const navLinksLength = navLinks.length;
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const menu = document.querySelector(".nav-links");
 
-const scrollToTopBtn = document.getElementById("scroll-to-top-button");
-// const showOnPx = 300;
 const body = document.querySelector("body");
 
 const copyrightYear = document.getElementById("copyright-year");
@@ -42,35 +40,24 @@ hamburgerBtn.addEventListener("click", () => {
 // Scroll To The Top function
 
 function calcScrollValue() {
-	// const progressValue = document.getElementById("progress-value");
-
+	const scrollProgress = document.getElementById("progress");
+	const progressValue = document.getElementById("progress-value");
 	const pos = document.documentElement.scrollTop;
-	const showOnPx = 300;
-
+	const showOnPx = 100;
 	const calcHeight =
 		document.documentElement.scrollHeight -
 		document.documentElement.clientHeight;
-	const scrollValue = Math.round((pos * 100) / calcHeight);
-
-	// const scrollContainer = () => {
-	// 	return document.documentElement || document.body;
-	// };
-
-	// const scrollValue = Math.round(
-	// 	(scrollContainer().scrollTop /
-	// 		(scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
-	// 		100
-	// );
+	const scrollValue = Math.round((pos * showOnPx) / calcHeight);
 
 	if (pos > showOnPx) {
-		scrollToTopBtn.classList.add("show");
+		scrollProgress.style.display = "grid";
 	} else {
-		scrollToTopBtn.classList.remove("show");
+		scrollProgress.style.display = "none";
 	}
 
-	scrollToTopBtn.addEventListener("click", goToTop);
+	scrollProgress.addEventListener("click", goToTop);
 
-	scrollToTopBtn.style.background = `conic-gradient(#32cd32 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+	scrollProgress.style.background = `conic-gradient(#00008bcc ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 }
 
 const goToTop = () => {
