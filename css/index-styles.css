@@ -1,0 +1,236 @@
+.hero-content-container {
+	padding-bottom: 3.125rem;
+	margin-inline: 1rem;
+}
+
+.hero-main-title {
+	font-family: var(--primary-font);
+	font-size: 2.5rem;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+	margin-bottom: 1.875rem;
+}
+
+.hero-subtext-and-lines {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-lines {
+	border: none;
+	outline: none;
+	background-color: var(--accent-color-two);
+	height: 0.063rem;
+	width: 5rem;
+}
+
+.hero-subtext {
+	font-family: var(--primary-font);
+	font-size: 1rem;
+	font-weight: 500;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 0.188rem;
+	margin-block: 0.625rem;
+}
+
+.hero-img {
+	background-image: url("../images/ian-schneider-TamMbr4okv4-unsplash.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 60vh;
+}
+
+.main-section-container {
+	background-image: url("../images/18240979_v748-toon-103.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main-content-container {
+	padding: 3.125rem 0 6.25rem 0;
+}
+
+.main-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 4.375rem;
+	margin-inline: 1rem;
+}
+
+.main-heading-and-lines {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5rem;
+}
+
+.main-heading {
+	font-family: var(--primary-font);
+	font-size: 1.75rem;
+	color: var(--secondary-color);
+	font-weight: 700;
+}
+
+.main-line {
+	border: none;
+	outline: none;
+	background-color: var(--primary-color);
+	height: 1px;
+	width: 18.5rem;
+	text-align: center;
+}
+
+.main-text {
+	font-family: var(--secondary-font);
+	font-size: 1.375rem;
+	color: #363636;
+	text-align: center;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+}
+.mission-and-goals-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-inline: 1rem;
+}
+
+.mission-container {
+	margin-bottom: 3.125rem;
+}
+
+.mission-container,
+.goals-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mission-content,
+.goals-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.313rem solid var(--primary-color);
+	border-radius: 50%;
+	height: 6.25rem;
+	width: 6.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.mission-content img,
+.goals-content img {
+	height: 3.75rem;
+	width: 3.75rem;
+}
+
+.mission-heading,
+.goals-heading {
+	font-family: var(--primary-font);
+	font-size: 1.875rem;
+	color: #000000;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+	margin-bottom: 1.25rem;
+}
+
+.mission-subtext {
+	font-family: var(--secondary-font);
+	font-size: 1.375rem;
+	color: #363636;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.goals {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.goals li {
+	text-align: center;
+	font-family: var(--secondary-font);
+	font-size: 1.375rem;
+	color: #363636;
+	list-style-type: none;
+	margin-bottom: 0.938rem;
+	padding-left: 0.313rem;
+}
+
+.goals li::marker {
+	content: "";
+	font-size: 1.25rem;
+	font-weight: 700;
+	font-family: "Font Awesome 5 Free";
+	color: var(--accent-color-two);
+}
+
+@media (min-width: 426px) {
+	.hero-main-title {
+		width: 100%;
+		max-width: 37.5rem;
+		margin-inline: auto;
+		font-size: 2.813rem;
+	}
+
+	.main-content-text {
+		font-size: 1.5rem;
+		width: 100%;
+		max-width: 37.5rem;
+	}
+
+	.mission-heading,
+	.goals-heading {
+		font-size: 2.125rem;
+	}
+
+	.mission-subtext,
+	.goals {
+		font-size: 1.5rem;
+		width: 100%;
+		max-width: 28.125rem;
+	}
+}
+
+@media (min-width: 769px) {
+	.hero-main-title {
+		font-size: 3.375rem;
+		width: 100%;
+		max-width: 43.75rem;
+	}
+
+	.hero-subtext-and-lines {
+		flex-direction: row;
+	}
+
+	.hero-lines {
+		margin-inline: 25px;
+		width: 6.25rem;
+	}
+
+	.hero-img {
+		background-attachment: fixed;
+	}
+
+	.main-heading {
+		font-size: 2.1875rem;
+	}
+
+	.main-text {
+		max-width: 800px;
+	}
+
+	.main-line {
+		width: 23.125rem;
+	}
+}
