@@ -21,7 +21,7 @@
 }
 
 html {
-	color-scheme: dark light;
+	/* color-scheme: dark light; */
 	hanging-punctuation: first last;
 
 	line-height: 1.15;

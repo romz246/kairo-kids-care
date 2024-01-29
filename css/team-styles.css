@@ -65,6 +65,7 @@
 	box-shadow: inset 2px 2px 5px 5px rgba(0, 0, 0, 0.2),
 		0 0 10px 0 rgba(0, 0, 0, 0.5);
 	margin-block: 5px;
+	backdrop-filter: blur(30px);
 }
 
 .team-member-photo {
