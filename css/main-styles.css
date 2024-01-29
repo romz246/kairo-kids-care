@@ -20,6 +20,21 @@
 	--secondary-font: "Sofia Sans", sans-serif;
 }
 
+html {
+	color-scheme: dark light;
+	hanging-punctuation: first last;
+
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	min-height: 100svh;
+}
+
 img,
 picture,
 svg,
@@ -28,10 +43,32 @@ video {
 	max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p {
+	max-width: 75ch;
+	text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:has(:target) {
+		scroll-behavior: smooth;
+		scroll-padding-top: 3rem;
+	}
+}
+
 .header {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	z-index: 1000;
 }
 
 .header-contact-info {
